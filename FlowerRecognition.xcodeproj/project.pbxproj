@@ -3,18 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B36A45A92E077B2FA03E9694 /* Pods_FlowerRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50217C731227BE1F14DB4B9 /* Pods_FlowerRecognition.framework */; };
 		FBBDD8E0232B31C9004C2525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBDD8DF232B31C9004C2525 /* AppDelegate.swift */; };
 		FBBDD8E2232B31C9004C2525 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBDD8E1232B31C9004C2525 /* ViewController.swift */; };
 		FBBDD8E5232B31C9004C2525 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBBDD8E3232B31C9004C2525 /* Main.storyboard */; };
 		FBBDD8E7232B31CA004C2525 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBDD8E6232B31CA004C2525 /* Assets.xcassets */; };
 		FBBDD8EA232B31CA004C2525 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBBDD8E8232B31CA004C2525 /* LaunchScreen.storyboard */; };
+		FBBDD8F2232B33B9004C2525 /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FBBDD8F1232B33B9004C2525 /* FlowerClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		548B77F112E3153674E84FD6 /* Pods-FlowerRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerRecognition.debug.xcconfig"; path = "Target Support Files/Pods-FlowerRecognition/Pods-FlowerRecognition.debug.xcconfig"; sourceTree = "<group>"; };
+		E50217C731227BE1F14DB4B9 /* Pods_FlowerRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowerRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7221D92AC3C21DEA2C410EC /* Pods-FlowerRecognition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerRecognition.release.xcconfig"; path = "Target Support Files/Pods-FlowerRecognition/Pods-FlowerRecognition.release.xcconfig"; sourceTree = "<group>"; };
 		FBBDD8DC232B31C9004C2525 /* FlowerRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowerRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBDD8DF232B31C9004C2525 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBBDD8E1232B31C9004C2525 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		FBBDD8E6232B31CA004C2525 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBBDD8E9232B31CA004C2525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBBDD8EB232B31CA004C2525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBBDD8F1232B33B9004C2525 /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B36A45A92E077B2FA03E9694 /* Pods_FlowerRecognition.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F6D1A3CEC91812B56794795 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				548B77F112E3153674E84FD6 /* Pods-FlowerRecognition.debug.xcconfig */,
+				E7221D92AC3C21DEA2C410EC /* Pods-FlowerRecognition.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E601B06BA26E4448E93C2D16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E50217C731227BE1F14DB4B9 /* Pods_FlowerRecognition.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FBBDD8D3232B31C9004C2525 = {
 			isa = PBXGroup;
 			children = (
 				FBBDD8DE232B31C9004C2525 /* FlowerRecognition */,
 				FBBDD8DD232B31C9004C2525 /* Products */,
+				1F6D1A3CEC91812B56794795 /* Pods */,
+				E601B06BA26E4448E93C2D16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +80,7 @@
 		FBBDD8DE232B31C9004C2525 /* FlowerRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				FBBDD8F1232B33B9004C2525 /* FlowerClassifier.mlmodel */,
 				FBBDD8DF232B31C9004C2525 /* AppDelegate.swift */,
 				FBBDD8E1232B31C9004C2525 /* ViewController.swift */,
 				FBBDD8E3232B31C9004C2525 /* Main.storyboard */,
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBBDD8EE232B31CA004C2525 /* Build configuration list for PBXNativeTarget "FlowerRecognition" */;
 			buildPhases = (
+				80132214F552B9C31CB61484 /* [CP] Check Pods Manifest.lock */,
 				FBBDD8D8232B31C9004C2525 /* Sources */,
 				FBBDD8D9232B31C9004C2525 /* Frameworks */,
 				FBBDD8DA232B31C9004C2525 /* Resources */,
+				2723579390AEB4854C697798 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,11 +159,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2723579390AEB4854C697798 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowerRecognition/Pods-FlowerRecognition-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowerRecognition/Pods-FlowerRecognition-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlowerRecognition/Pods-FlowerRecognition-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80132214F552B9C31CB61484 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlowerRecognition-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FBBDD8D8232B31C9004C2525 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBBDD8F2232B33B9004C2525 /* FlowerClassifier.mlmodel in Sources */,
 				FBBDD8E2232B31C9004C2525 /* ViewController.swift in Sources */,
 				FBBDD8E0232B31C9004C2525 /* AppDelegate.swift in Sources */,
 			);
@@ -280,6 +352,7 @@
 		};
 		FBBDD8EF232B31CA004C2525 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 548B77F112E3153674E84FD6 /* Pods-FlowerRecognition.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +370,7 @@
 		};
 		FBBDD8F0232B31CA004C2525 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7221D92AC3C21DEA2C410EC /* Pods-FlowerRecognition.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
